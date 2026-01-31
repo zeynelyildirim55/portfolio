@@ -1,0 +1,43 @@
+body {
+    font-family: "GFS Didot", serif !important;
+    font-weight: 400;
+    font-style: normal;
+}
+.hero{
+    background-color: #91C6BC;
+}
+.skills{
+    background-color: #F6F3C2;
+}
+.contact{
+    background-color: lightgreen;
+}
+.footer{
+    background-color: #4B9DA9;
+}
+.binary{
+    border-radius: 20%;
+}
+.profile{
+    border-radius: 40%;
+}
+.icon{
+    height: 30px;
+    margin-right: 10px;
+}
+.work{
+    background-color: #F6F3C2;
+}
+.diffcolor{
+    background-color: #F6F3C2;
+}
+.contact > .container{
+    display: flex;
+    gap: 0.4rem;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 50%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}

@@ -32,6 +32,24 @@ function rollDice() {
   } else {
     title.textContent = "TIE!";
   }
+
+  setTimeout(function () {
+    if (
+      (randomNo1 === 2 && randomNo2 === 4) ||
+      (randomNo2 === 2 && randomNo1 === 4)
+    ) {
+      document.body.style.backgroundImage =
+        "url('./images/heart_background.png')";
+
+      setTimeout(function () {
+        alert("❤️Seni çok seviyoruum❤️");
+      }, 100);
+
+      setTimeout(function () {
+        document.body.style.backgroundImage = "none";
+      }, 3000);
+    }
+  }, 50);
 }
 
 function buttonAnimation() {

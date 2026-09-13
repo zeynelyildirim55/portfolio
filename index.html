@@ -2,13 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Zeynel Yıldırım</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zeynel Yıldırım - Computer Science Student at Bilkent</title>
+    <meta
+      name="description"
+      content="Third-year computer science student at Bilkent University. Games, full-stack tools, and machine learning models for biology."
+    />
+    <meta name="theme-color" content="#91c6bc" />
+    <meta property="og:title" content="Zeynel Yıldırım" />
+    <meta
+      property="og:description"
+      content="Third-year computer science student at Bilkent University. Games, full-stack tools, and machine learning models for biology."
+    />
+    <meta property="og:image" content="./images/ZeynelCV.jpeg" />
+    <meta property="og:type" content="website" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230c4f52'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='14' font-weight='700' fill='%23f5f6f2' text-anchor='middle'%3EZY%3C/text%3E%3C/svg%3E"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,293 +26,426 @@
       href="https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap"
       rel="stylesheet"
     />
-
-    <style></style>
+    <link rel="stylesheet" href="./styles.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
   </head>
 
   <body>
-    <section class="hero">
-      <div class="container col-xxl-8 px-4 py-5">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-          <div class="col-10 col-sm-8 col-lg-6">
+    <a class="skip" href="#main">Skip to content</a>
+    <span id="top-sentinel" aria-hidden="true"></span>
+
+    <header class="nav" id="nav">
+      <div class="shell">
+        <a class="nav-mark" href="#top-sentinel">Zeynel Yıldırım<span>.</span></a>
+        <nav class="nav-links" aria-label="Sections">
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#play">Playground</a>
+          <a href="#contact">Contact</a>
+          <a class="nav-cta" href="./resume/index.html">Resume</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero: asymmetric split, name led -->
+      <section class="hero shell">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1 class="lift">Zeynel Yıldırım</h1>
+            <p class="hero-role lift">
+              Third-year computer science student at <strong>Bilkent University</strong>.
+              I build games, full-stack tools, and machine learning models for biology.
+            </p>
+            <div class="hero-actions lift">
+              <a class="btn btn-primary" href="./resume/index.html">Resume</a>
+              <a class="btn btn-quiet" href="mailto:yilzeynel6@gmail.com">Email me</a>
+            </div>
+          </div>
+          <figure class="hero-media">
             <img
               src="./images/ZeynelCV.jpeg"
-              class="profile d-block mx-lg-auto"
-              alt="Bootstrap Themes"
-              width="500"
+              alt="Zeynel Yıldırım"
+              width="360"
+              height="450"
+              fetchpriority="high"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <!-- The record: real numbers, the loudest moment on the page -->
+      <section class="record band" aria-label="Academic record">
+        <div class="shell">
+          <div class="record-grid">
+            <div class="record-item" data-reveal>
+              <span class="record-figure">71st</span>
+              <p class="record-label">
+                national rank among approx. 3 million students in the university entrance
+                exam (YKS)
+              </p>
+            </div>
+            <div class="record-item" data-reveal>
+              <span class="record-figure">3.70</span>
+              <p class="record-label">CGPA out of 4.00, High Honour</p>
+            </div>
+            <div class="record-item" data-reveal>
+              <span class="record-figure">Valedictorian</span>
+              <p class="record-label">
+                at Buca Science High School
+              </p>
+            </div>
+            <div class="record-item" data-reveal>
+              <span class="record-figure">3rd</span>
+              <p class="record-label">
+                APPS Game Jam, built in 48 hours with a team of four
+              </p>
+            </div>
+          </div>
+          <p class="record-note">
+            Awards and certificates in the URFODU, Thales, and Kangaroo math olympiads.
+          </p>
+        </div>
+      </section>
+
+      <!-- Experience: chronological rail, dates are real sequence markers -->
+      <section class="band shell" id="experience">
+        <div class="section-head"><h2>Experience</h2></div>
+        <div class="rail">
+          <article class="rail-item">
+            <p class="rail-when">
+              May 2026 to now <span class="place">Ankara</span>
+            </p>
+            <div>
+              <h3 class="rail-role">Undergraduate Researcher, Bioinformatics</h3>
+              <p class="rail-org">CICEKLAB, Bilkent University</p>
+            </div>
+          </article>
+
+          <article class="rail-item">
+            <p class="rail-when">
+              Jan 2026 to now <span class="place">Ankara</span>
+            </p>
+            <div>
+              <h3 class="rail-role">Academic Peer Tutor, CS101</h3>
+              <p class="rail-org">Bilkent University</p>
+            </div>
+          </article>
+
+          <article class="rail-item">
+            <p class="rail-when">
+              Jul to Aug 2026 <span class="place">Paris and Istanbul</span>
+            </p>
+            <div>
+              <h3 class="rail-role">Game and Game Engine Developer Intern</h3>
+              <p class="rail-org">Gamelab Istanbul, AITIAL</p>
+            </div>
+          </article>
+
+          <article class="rail-item">
+            <p class="rail-when">
+              Jun to Jul 2026 <span class="place">Ankara</span>
+            </p>
+            <div>
+              <h3 class="rail-role">Summer Intern, Service and Monitoring Solutions</h3>
+              <p class="rail-org">Turkcell</p>
+            </div>
+          </article>
+
+          <article class="rail-item">
+            <p class="rail-when">
+              Oct 2025 to now <span class="place">Ankara</span>
+            </p>
+            <div>
+              <h3 class="rail-role">Organization Committee</h3>
+              <p class="rail-org">ACM Bilkent</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Projects: asymmetric grid, one cell per project -->
+      <section class="projects band" id="projects">
+        <div class="shell">
+          <div class="section-head"><h2>Selected projects</h2></div>
+          <div class="project-grid">
+            <article class="card card-lead">
+              <div class="card-inner">
+                <div>
+                  <p class="card-meta">2026</p>
+                  <h3>Lumina</h3>
+                  <ul class="card-points">
+                    <li>
+                      An AI study platform that turns a reading pile into study guides,
+                      flashcards, and quizzes, each answer citing the source it came from.
+                    </li>
+                    <li>
+                      Multi-stage document retrieval pipeline with local embeddings and
+                      hybrid vector search.
+                    </li>
+                    <li>
+                      Async generation workers and a dual-mode deployment, self-hosted
+                      locally or running on AWS.
+                    </li>
+                  </ul>
+                  <div class="card-links">
+                    <a class="link" href="https://github.com/coDDesigning/Lumina"
+                      >GitHub</a
+                    >
+                  </div>
+                </div>
+                <div class="tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">React</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">PostgreSQL</span>
+                  <span class="tag">SQLite</span>
+                  <span class="tag">Docker</span>
+                  <span class="tag">AWS</span>
+                  <span class="tag">pgvector</span>
+                  <span class="tag">ChromaDB</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card card-wide">
+              <p class="card-meta">April 2026</p>
+              <h3>GraviTrix</h3>
+              <ul class="card-points">
+                <li>
+                  A block-based puzzle game written from scratch in 48 hours for the APPS
+                  Game Jam.
+                </li>
+                <li>Third place for gameplay and execution, built with a team of four.</li>
+              </ul>
+              <div class="tags">
+                <span class="tag">C#</span>
+                <span class="tag">Unity</span>
+              </div>
+              <div class="card-links">
+                <a class="link" href="https://github.com/borakafadar/GraviTrix">GitHub</a>
+                <a
+                  class="link"
+                  href="https://play.unity.com/tr/games/732989aa-1205-4741-920b-4e99fefd2f0e/gravitrix"
+                  >Play it</a
+                >
+              </div>
+            </article>
+
+            <article class="card card-narrow">
+              <p class="card-meta">July 2026</p>
+              <h3>ITSM Tool</h3>
+              <ul class="card-points">
+                <li>
+                  Full-stack ticket management app with role-based access control on JWT
+                  and custom attributes.
+                </li>
+                <li>Framework-free frontend in vanilla JavaScript over a .NET backend.</li>
+              </ul>
+              <div class="tags">
+                <span class="tag">C#</span>
+                <span class="tag">.NET</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <div class="card-links">
+                <a class="link" href="https://github.com/zeynelyildirim55/itsm-tool"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+
+            <article class="card card-row">
+              <div class="card-inner">
+                <div>
+                  <p class="card-meta">2025</p>
+                  <h3>BilCity Tycoon</h3>
+                  <p>
+                    A 2D campus simulation and strategy game set on the Bilkent University
+                    map, with game mechanics and save data serialized to JSON.
+                  </p>
+                  <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">LibGDX</span>
+                    <span class="tag">JSON</span>
+                  </div>
+                </div>
+                <div class="card-links">
+                  <a class="link" href="https://github.com/borakafadar/BilCityTycoon"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Playground: small browser pieces, real screenshots -->
+      <section class="band shell" id="play">
+        <div class="section-head"><h2>Playground</h2></div>
+        <div class="play-grid">
+          <a class="tile" href="./Simon Game/index.html">
+            <img
+              class="tile-shot"
+              src="./images/thumbs/simon.webp"
+              alt="Screenshot of the Simon Game"
+              width="900"
+              height="675"
               loading="lazy"
             />
-          </div>
-          <div class="col-lg-6">
-            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
-              Hello, I'm Zeynel.
-            </h1>
-            <p class="lead">
-              A passionate web and software developer.<br />
-              Click here for my full resume:
-            </p>
-            <a href="./resume/index.html" type="button" class="btn btn-light"
-              >Resume</a
+            <span class="tile-name">Simon Game</span>
+            <span class="tile-what">Memory game</span>
+          </a>
+          <a class="tile" href="./Drum Kit/index.html">
+            <img
+              class="tile-shot"
+              src="./images/thumbs/drumkit.webp"
+              alt="Screenshot of the Drum Kit"
+              width="900"
+              height="675"
+              loading="lazy"
+            />
+            <span class="tile-name">Drum Kit</span>
+            <span class="tile-what">Play it with the keyboard</span>
+          </a>
+          <a class="tile" href="./Dicee/dicee.html">
+            <img
+              class="tile-shot"
+              src="./images/thumbs/dice.webp"
+              alt="Screenshot of the Dice Game"
+              width="900"
+              height="675"
+              loading="lazy"
+            />
+            <span class="tile-name">Dice Game</span>
+            <span class="tile-what">Two player roll</span>
+          </a>
+          <a class="tile" href="./tindog/index.html">
+            <img
+              class="tile-shot"
+              src="./images/thumbs/tindog.webp"
+              alt="Screenshot of the TinDog page"
+              width="900"
+              height="675"
+              loading="lazy"
+            />
+            <span class="tile-name">TinDog</span>
+            <span class="tile-what">Landing page study</span>
+          </a>
+          <a class="tile" href="./mondrian/index.html">
+            <img
+              class="tile-shot"
+              src="./images/thumbs/mondrian.webp"
+              alt="Screenshot of the Mondrian painting"
+              width="900"
+              height="675"
+              loading="lazy"
+            />
+            <span class="tile-name">Mondrian</span>
+            <span class="tile-what">Painted in pure CSS</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Toolkit: grouped definition list -->
+      <section class="kit band" aria-label="Toolkit">
+        <div class="shell">
+          <div class="section-head"><h2>Toolkit</h2></div>
+          <dl class="kit-grid">
+            <div class="kit-row">
+              <dt class="kit-term">languages</dt>
+              <dd>C++, C#, Java, Python, JavaScript, TypeScript</dd>
+            </div>
+            <div class="kit-row">
+              <dt class="kit-term">game dev</dt>
+              <dd>Unity, GlistEngine, LibGDX</dd>
+            </div>
+            <div class="kit-row">
+              <dt class="kit-term">web</dt>
+              <dd>React, FastAPI, Node.js, Express, .NET, PostgreSQL, SQLite</dd>
+            </div>
+            <div class="kit-row">
+              <dt class="kit-term">machine learning</dt>
+              <dd>PyTorch, TensorFlow, scikit-learn, RAG, pgvector, ChromaDB</dd>
+            </div>
+            <div class="kit-row">
+              <dt class="kit-term">tools</dt>
+              <dd>Git, Docker, AWS, Jira, SonarQube, DBeaver, Figma, LaTeX</dd>
+            </div>
+            <div class="kit-row">
+              <dt class="kit-term">spoken</dt>
+              <dd>Turkish (native), English (professional working proficiency)</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- Close -->
+      <section class="close" id="contact">
+        <div class="shell">
+          <h2>Want to talk about games, systems, or machine learning?</h2>
+          <p>Email is the fastest way to reach me, and I answer every one.</p>
+          <div class="close-actions">
+            <a class="btn btn-primary" href="mailto:yilzeynel6@gmail.com">Email me</a>
+            <a class="link" href="https://www.linkedin.com/in/zeynel-yildirim-19292a328/"
+              >LinkedIn</a
             >
+            <a class="link" href="https://github.com/zeynelyildirim55">GitHub</a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <section class="skills">
-      <div class="container px-4 py-5" id="icon-grid">
-        <h2 class="pb-2 border-bottom">Some of my skills</h2>
-        <div
-          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5"
-        >
-          <div class="col d-flex align-items-start">
-            <img class="icon" src="./images/pc-display.svg" alt="pc icon" />
-            <div>
-              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
-                Programming Languages
-              </h3>
-              <p>
-                Java, C# (Unity), C++, Python. (Fundamental understanding of Object Oriented
-                Programming.)
-              </p>
-            </div>
-          </div>
-          <div class="col d-flex align-items-start">
-            <img class="icon" src="./images/code.svg" alt="code" />
-            <div>
-              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
-                Web Development
-              </h3>
-              <p>
-                HTML, CSS, Javascript, React, Node, PostgreSQL, and Web3
-                Development.
-              </p>
-            </div>
-          </div>
-            <div class="col d-flex align-items-start">
-            <img class="icon" src="./images/gear-wide.svg" alt="pc icon" />
-            <div>
-              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
-                Machine Learning
-              </h3>
-              <p>
-                PyTorch, TensorFlow, scikit-learn...
-              </p>
-            </div>
-          </div>
-          <div class="col d-flex align-items-start">
-            <img class="icon" src="./images/tools.svg" alt="tools" />
-            <div>
-              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
-                Developer Tools & IDEs:
-              </h3>
-              <p>Git, GitHub, MS Visual Studio, VS Code, IntelliJ.</p>
-            </div>
-          </div>
-          <div class="col d-flex align-items-start">
-            <img class="icon" src="./images/library.svg" alt="library" />
-            <div>
-              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
-                Libraries and Frameworks
-              </h3>
-              <p>JavaFX, Swing, LibGDX (Java Game Development).</p>
-            </div>
-          </div>
-          <div class="col d-flex align-items-start">
-            <img class="icon" src="./images/laptop.svg" alt="laptop" />
-            <div>
-              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
-                Other Technologies
-              </h3>
-              <p>LaTeX, Figma, JSON, MS Office.</p>
-            </div>
-          </div>
+    <footer class="page-foot">
+      <div class="shell">
+        <div class="foot">
+          <p class="mono">© <span id="year">2026</span> Zeynel Yıldırım</p>
+          <a class="mono" href="mailto:yilzeynel6@gmail.com">yilzeynel6@gmail.com</a>
         </div>
       </div>
-    </section>
+    </footer>
 
-    <section class="work">
-      <div class="container px-4 py-5" id="hanging-icons">
-        <h2 class="pb-2 border-bottom">Projects</h2>
-        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-          <div class="col d-flex align-items-start">
-            <div
-              class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"
-            >
-              <img
-                class="icon"
-                src="./images/house-door-fill.svg"
-                alt="house"
-              />
-            </div>
-            <div>
-              <h3 class="fs-2 text-body-emphasis">BilCity Tycoon</h3>
-              <ul>
-                <li>
-                  Co-developed a 2D campus simulation/strategy game with Java,
-                  LibGDX based on the Bilkent University map.
-                </li>
-                <li>
-                  Designed game mechanics and managed data serialization using
-                  JSON.
-                </li>
-              </ul>
-              <a
-                href="https://github.com/borakafadar/BilCityTycoon"
-                class="btn btn-light"
-                >Github</a
-              >
-            </div>
-          </div>
+    <script>
+      (function () {
+        var year = document.getElementById("year");
+        if (year) year.textContent = new Date().getFullYear();
 
-          <div class="col d-flex align-items-start">
-            <div
-              class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"
-            >
-              <img
-                class="icon"
-                src="./images/boxes.svg"
-                alt="house"
-              />
-            </div>
-            <div>
-              <h3 class="fs-2 text-body-emphasis">GraviTrix</h3>
-              <ul>
-                <li>
-                  Co-developed a block-based, Tetris-like puzzle game from scratch within 48 hours for the APPS Game Jam.
-                </li>
-                <li>
-                  Collaborated within a 4-person team to design and implement core game mechanics and logic.
-                </li>
-                <li>
-                  Awarded 3rd Place out of competing teams for gameplay and execution.
-                </li>
-              </ul>
-              <a
-                href="https://github.com/borakafadar/GraviTrix"
-                class="btn btn-light"
-                >Github</a
-              >
-              <a
-                href="https://play.unity.com/tr/games/732989aa-1205-4741-920b-4e99fefd2f0e/gravitrix"
-                class="btn btn-light"
-                >Play!</a
-              >
-            </div>
-          </div>
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var reveals = document.querySelectorAll("[data-reveal]");
 
-          <div class="col d-flex align-items-start">
-            <div
-              class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"
-            >
-              <img
-                class="icon"
-                src="./images/controller.svg"
-                alt="controller"
-              />
-            </div>
-            <div>
-              <h3 class="fs-2 text-body-emphasis">Simon Game</h3>
-              <ul>
-                <li>A game that will strengthen your memory.</li>
-                <li>HTML, CSS Javascript.</li>
-              </ul>
-              <a href="./Simon Game/index.html" class="btn btn-light">Play</a>
-            </div>
-          </div>
+        if (!reduce && "IntersectionObserver" in window) {
+          var revealObserver = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("is-in");
+                  revealObserver.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.35 }
+          );
+          reveals.forEach(function (el, i) {
+            el.style.setProperty("--i", i);
+            revealObserver.observe(el);
+          });
+        } else {
+          reveals.forEach(function (el) {
+            el.classList.add("is-in");
+          });
+        }
 
-          <div class="col d-flex align-items-start">
-            <div
-              class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"
-            >
-              <img
-                class="icon"
-                src="./images/music-note-beamed.svg"
-                alt="music note"
-              />
-            </div>
-            <div>
-              <h3 class="fs-2 text-body-emphasis">Drum Kit</h3>
-              <ul>
-                <li>A drum kit that you can play with your keyboard.</li>
-                <li>HTML, CSS Javascript.</li>
-              </ul>
-              <a href="./Drum Kit/index.html" class="btn btn-light">Drum Kit</a>
-            </div>
-          </div>
-
-          <div class="col d-flex align-items-start">
-            <div
-              class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"
-            >
-              <img class="icon" src="./images/dice-6-fill.svg" alt="dice" />
-            </div>
-            <div>
-              <h3 class="fs-2 text-body-emphasis">Dice Game</h3>
-              <ul>
-                <li>
-                  This is a dice game created using HTML, CSS and Javascript.
-                </li>
-              </ul>
-              <a href="./Dicee/dicee.html" class="btn btn-light">Dice Game</a>
-            </div>
-          </div>
-
-          <div class="col d-flex align-items-start">
-            <div
-              class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"
-            >
-              <img class="icon" src="./images/phone.svg" alt="iphone" />
-            </div>
-            <div>
-              <h3 class="fs-2 text-body-emphasis">TinDog</h3>
-              <ul>
-                <li>Tinder for dogs!</li>
-                <li>Just a fun website.</li>
-              </ul>
-              <a href="./tindog/index.html" class="btn btn-light">TinDog</a>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-
-    <section class="contact">
-      <div class="container">
-        <h2 style="font-weight: bold">Contact Me!</h2>
-        <p style="font-size: 1.5rem">
-          Want to talk about software development or web projects? Feel free to
-          email me! (yilzeynel6@gmail.com)
-        </p>
-        <a href="mailto:yilzeynel6@gmail.com" class="btn btn-light btn-lg px-4"
-          >Contact Me!</a
-        >
-      </div>
-    </section>
-
-    <section class="footer">
-      <div class="container">
-        <footer class="py-3">
-          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item">
-              <a
-                href="https://www.linkedin.com/in/zeynel-yildirim-19292a328/"
-                class="nav-link px-2 text-body-secondary"
-                >LinkedIn</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                href="https://github.com/zeynelyildirim55"
-                class="nav-link px-2 text-body-secondary"
-                >Github</a
-              >
-            </li>
-          </ul>
-          <p class="text-center text-body-secondary">© 2025 Zeynel Yıldırım</p>
-        </footer>
-      </div>
-    </section>
+        var sentinel = document.getElementById("top-sentinel");
+        var nav = document.getElementById("nav");
+        if (sentinel && nav && "IntersectionObserver" in window) {
+          new IntersectionObserver(function (entries) {
+            nav.dataset.stuck = String(!entries[0].isIntersecting);
+          }).observe(sentinel);
+        }
+      })();
+    </script>
   </body>
 </html>

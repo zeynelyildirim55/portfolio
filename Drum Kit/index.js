@@ -1,58 +1,50 @@
-var num = document.querySelectorAll(".drum").length;
+var volume = 1;
 
-for (var i = 0; i < num; i++) {
-  document.querySelectorAll(".drum")[i].addEventListener("click", function () {
-    var buttonHTML = this.innerHTML;
-    makeSound(buttonHTML);
-    buttonAnimation(buttonHTML);
+var SOUNDS = {
+  w: "tom-1",
+  a: "tom-2",
+  s: "tom-3",
+  d: "tom-4",
+  j: "snare",
+  k: "crash",
+  l: "kick-bass",
+};
+
+var audioCache = {};
+Object.keys(SOUNDS).forEach(function (key) {
+  audioCache[key] = new Audio("./sounds/" + SOUNDS[key] + ".wav");
+  audioCache[key].preload = "auto";
+});
+
+var drums = document.querySelectorAll(".drum");
+for (var i = 0; i < drums.length; i++) {
+  drums[i].addEventListener("click", function () {
+    hit(this.innerHTML);
   });
 }
 
-document.addEventListener("keypress", function (event) {
-  makeSound(event.key);
-  buttonAnimation(event.key);
+document.addEventListener("keydown", function (event) {
+  if (event.repeat) return;
+  hit(event.key);
 });
 
-function makeSound(key) {
-  switch (key) {
-    case "w":
-      var tom1 = new Audio("./sounds/tom-1.mp3");
-      tom1.play();
-      break;
-    case "a":
-      var tom2 = new Audio("./sounds/tom-2.mp3");
-      tom2.play();
-      break;
-    case "s":
-      var tom3 = new Audio("./sounds/tom-3.mp3");
-      tom3.play();
-      break;
-    case "d":
-      var tom4 = new Audio("./sounds/tom-4.mp3");
-      tom4.play();
-      break;
-    case "j":
-      var snare = new Audio("./sounds/snare.mp3");
-      snare.play();
-      break;
-    case "k":
-      var crash = new Audio("./sounds/crash.mp3");
-      crash.play();
-      break;
-    case "l":
-      var kick = new Audio("./sounds/kick-bass.mp3");
-      kick.play();
-      break;
+function hit(key) {
+  key = String(key).trim().toLowerCase();
+  if (!SOUNDS[key]) return;
+  makeSound(key);
+  buttonAnimation(key);
+}
 
-    default:
-      break;
-  }
+function makeSound(key) {
+  var audio = audioCache[key].cloneNode();
+  audio.volume = volume;
+  audio.play().catch(function () { });
 }
 
 function buttonAnimation(key) {
   var activeButton = document.querySelector("." + key);
+  if (!activeButton) return;
   activeButton.classList.add("pressed");
-
   setTimeout(function () {
     activeButton.classList.remove("pressed");
   }, 100);
